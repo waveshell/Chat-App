@@ -66,16 +66,18 @@
     <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
     <script src="/bower_components/underscore/underscore.js"></script>
     <script src="/bower_components/angular-underscore-module/angular-underscore-module.js"></script>
+    <script src="/bower_components/socket.io-client/dist/socket.io.js"></script>
+    <script src="/bower_components/angular-socket-io/socket.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
     <script src="scripts/app.js"></script>
 
+    <script src="scripts/controllers/chatPage.controller.js"></script>
     <script src="scripts/components/chat/chat.component.js"></script>
     <script src="scripts/services/chat.service.js"></script>
-
+    <script src="scripts/factories/socket.factory.js"></script>
     <!-- endbuild -->
   </body>
 </html>

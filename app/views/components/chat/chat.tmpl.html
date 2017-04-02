@@ -6,10 +6,11 @@
     <md-list></md-list>
   </md-content>
   <form name="sendForm" ng-submit>
-    <md-input-container class=md-padding"">
+    <md-input-container class="md-padding" flex>
       <label>Message text:</label>
       <input placeholder="Type something..." type="text" ng-model="message">
-      <md-button type="submit">Send</md-button>
+      <span flex></span>
+      <md-button md-colors="{'background-color': 'primary-500'}" type="submit">Send</md-button>
     </md-input-container>
   </form>
 </md-card>

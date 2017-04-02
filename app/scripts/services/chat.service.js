@@ -1,8 +1,11 @@
-function ChatService ($http) {
+function ChatService ($log, $http, socket) {
 
-  console.log('init chatService');
+  $log.log('ChatService init');
 
-  this.sendMessage = function () {
+  this.sendMessage = function (msg) {
+    socket.emit('send:message', {
+      message: msg
+    });
     // $http.post({
     //   url: '',
     //   data:''

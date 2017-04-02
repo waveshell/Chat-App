@@ -13,7 +13,11 @@ function ChatController ($log, chatService) {
 
   this.sendMessage = function (message) {
     if (message && angular.isString(message) && message.length > 0) {
-      chatService.sendMessage(message);
+      chatService.sendMessage(message).then(function () {
+          
+      }).catch(function () {
+
+      });
     }
   };
 }

@@ -1,4 +1,5 @@
 angular.module('chatApp', [
+    'btford.socket-io',
     'ngMaterial',
     'angular-cache',
     'ngAnimate',
@@ -6,15 +7,15 @@ angular.module('chatApp', [
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngMessages',
+    'ngMessages'
   ])
   .config(function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'views/home.html',
-      resolve: {}
+      templateUrl: 'views/chat.html',
+      controller: 'ChatPageCtrl'
     })
   })
   .run(function () {
-    console.log('run: Hello World!');
+    console.log('Welcome to the Chat application!');
   }
 );
