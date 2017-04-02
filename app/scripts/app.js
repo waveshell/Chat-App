@@ -10,7 +10,8 @@ angular.module('chatApp', [
   ])
   .config(function ($routeProvider) {
     $routeProvider.when('/', {
-      templateUrl: 'views/home.html', resolve: {}
+      templateUrl: 'views/home.html',
+      resolve: {}
     })
   })
   .run(function () {

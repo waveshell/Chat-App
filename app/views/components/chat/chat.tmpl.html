@@ -1,0 +1,15 @@
+<md-card class="chat">
+  <md-toolbar class="" layout="row" layout-align="center">
+    <h3>Chat window</h3>
+  </md-toolbar>
+  <md-content class="md-padding">
+    <md-list></md-list>
+  </md-content>
+  <form name="sendForm" ng-submit>
+    <md-input-container class=md-padding"">
+      <label>Message text:</label>
+      <input placeholder="Type something..." type="text" ng-model="message">
+      <md-button type="submit">Send</md-button>
+    </md-input-container>
+  </form>
+</md-card>
