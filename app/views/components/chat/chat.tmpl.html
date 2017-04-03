@@ -3,12 +3,17 @@
     <h3>Chat window</h3>
   </md-toolbar>
   <md-content class="md-padding">
-    <md-list></md-list>
+    <md-list>
+      <!-- <span ng-repeat="msg in ChatPageCtrl.messages">
+        {{ msg.message }}
+      </span> -->
+      <span>{{$scope.messages}}</span>
+    </md-list>
   </md-content>
-  <form name="sendForm" ng-submit>
+  <form name="sendForm" ng-submit="$ctrl.sendMessage($ctrl.message)">
     <md-input-container class="md-padding" flex>
       <label>Message text:</label>
-      <input placeholder="Type something..." type="text" ng-model="message">
+      <input placeholder="Type something..." type="text" ng-model="$ctrl.message">
       <span flex></span>
       <md-button md-colors="{'background-color': 'primary-500'}" type="submit">Send</md-button>
     </md-input-container>

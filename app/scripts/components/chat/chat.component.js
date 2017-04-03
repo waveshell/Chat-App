@@ -5,21 +5,21 @@ const chatComponent = {
 };
 
 
-function ChatController ($log, chatService) {
-  $log.info('chat controller init');
-  $log.info('chatService: ', chatService);
+function ChatController ($log, chatService, $scope) {
+  // $log.info('$scope: ', $scope);
+  // $log.info('this: ', this);
 
-  this.message = {};
+  this.message = '';
 
   this.sendMessage = function (message) {
     if (message && angular.isString(message) && message.length > 0) {
-      chatService.sendMessage(message).then(function () {
-          
-      }).catch(function () {
-
-      });
+      chatService.sendMessage(message);
+      this.message = '';
+      $log.info('message sent');
+    } else {
+      $log.info('message invalid');
     }
   };
 }
 
-angular.module('chatApp').component('chat', chatComponent).name;
+angular.module('chatApp').component('chat', chatComponent);

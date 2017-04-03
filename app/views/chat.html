@@ -2,9 +2,10 @@
   <h2>
     Welcome to the chat application!
   </h2>
+  <md-list ng-repeat="msg in messages">
+    <span>{{ msg.message }}</span>
+  </md-list>
   <div flex="70" layout="row">
     <chat id="UserA"></chat>
-    <span flex></span>
-    <chat id="UserB"></chat>
   </div>
 </div>

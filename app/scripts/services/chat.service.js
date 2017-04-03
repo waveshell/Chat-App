@@ -6,10 +6,6 @@ function ChatService ($log, $http, socket) {
     socket.emit('send:message', {
       message: msg
     });
-    // $http.post({
-    //   url: '',
-    //   data:''
-    // });
   };
 }
 
